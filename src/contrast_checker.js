@@ -12,7 +12,7 @@ function isHexcode(hexcode) {
 function hexToRgb(hexcode) {
 
   if (!isHexcode(hexcode)) {
-    throw "hexToRgb requires 4 or 7 length string starting with #";
+    throw new Error("hexToRgb requires 4 or 7 length string starting with #");
   }
   if (hexcode.length === 4) {
     hexcode = sixFromThreeDigitHex(hexcode);
